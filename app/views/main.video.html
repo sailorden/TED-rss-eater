@@ -1,8 +1,8 @@
 <div id="video-wrapper">
-  <span class="glyphicon glyphicon-remove close-video" ng-click="removeHandler()" alt="Return to main page"></span>
+  <img class="close-video" ng-src="images/close.png" ng-click="removeHandler()" alt="Return to main page">
   <video width="100%" class='videoPlayer' controls autoplay preload>
     <!-- http://stackoverflow.com/questions/21292114/external-resource-not-being-loaded-by-angularjs -->
-    <source dynamic-url src=''>
+    <source dynamic-url src="">
   </video>
   <div class="video-desc">
     <p class="title">{{feed.title}}</p>

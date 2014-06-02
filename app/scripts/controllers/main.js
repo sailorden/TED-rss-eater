@@ -20,13 +20,16 @@ angular.module('tedApp')
       .$promise.then(function(data) {
         //add some id's to our feed array. so we can later reference it once we are in new view
         var counter = 0;
+        var regex = /<img\s.+\>/g; //strip img tracker
+
         data.responseData.feed.entries.forEach(function(el) {
           el.ind = counter;
           el.title = el.title.slice(4);//strip beginning where it says TED: 
+          el.content = el.content.replace(regex, '');
           counter++;
         });
 
-        console.log(data.responseData.feed.entries);
+        //console.log(data.responseData.feed.entries);
         $rootScope.feed = data.responseData.feed.entries;
       });
 
