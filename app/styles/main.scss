@@ -34,16 +34,20 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
     width: 100%;
 }
 
+#main-wrapper {
+    position: relative;
+}
+
+//
+//  VIDEO page
+//
+
 .close-video {
     position: absolute;
     top: 10px;
     right: 10px;
     color: white;
     z-index:2;
-}
-
-#main-wrapper {
-    position: relative;
 }
 
 #video-wrapper {
@@ -54,6 +58,19 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
     width: 100%;
     height: 100%;
     background-color: white;
+}
+
+.video-desc {
+    padding: 10px;
+    .title {
+        font-family: arial,sans-serif;
+        font-size: 22px;
+        letter-spacing: -0.03em;
+    }
+    .published {
+        border-bottom: 1px black solid;
+        margin-bottom: 20px;
+    }
 }
 
 .browsehappy {
@@ -90,7 +107,6 @@ body {
     body {
         font-size: 13px;
     }
-
 }
 
 @media screen and (min-width: 400px) {
@@ -104,9 +120,6 @@ body {
         background-color: black;
         color: white;
         padding: 10px;
-        .talk-desc-title {
-            
-        }
         .talk-desc-date {
             color: grey;
         }
