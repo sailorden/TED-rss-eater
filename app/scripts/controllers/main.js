@@ -21,6 +21,7 @@ angular.module('tedApp')
         var counter = 0;
         data.responseData.feed.entries.forEach(function(el) {
           el.ind = counter;
+          el.title = el.title.slice(4);//strip beginning where it says TED: 
           counter++;
         });
 

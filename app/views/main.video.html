@@ -1,1 +1,11 @@
-<p>This is the main.video view. {{url}}</p>
+<div id="video-wrapper">
+  <span class="glyphicon glyphicon-remove close-video" ng-click="removeHandler()" alt="Return to main page"></span>
+  <video width="100%" class='videoPlayer' controls autoplay preload>
+    <source dynamic-url src=''>
+  </video>
+  <div class="video-desc">
+    <p>{{feed.title}}</p>
+    <p>{{feed.publishedDate}}</p>
+    <p>{{feed.content}}</p>
+  </div>
+</div>
