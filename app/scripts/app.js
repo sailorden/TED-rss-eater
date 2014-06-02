@@ -20,8 +20,6 @@ angular
       })
       .state('home.video' ,{
         url: 'video/{talkId:[0-9]}',
-        //templateUrl: 'views/main.video.html',
-        //controller: 'VideoCtrl',
         views: {
           '': {
             templateUrl: 'views/main.video.html',
