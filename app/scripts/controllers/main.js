@@ -9,7 +9,8 @@ angular.module('tedApp')
           method: 'JSONP',
           params: {
             v: '1.0',
-            callback: 'JSON_CALLBACK'
+            callback: 'JSON_CALLBACK',
+            num: 10
           }
         }
       }
