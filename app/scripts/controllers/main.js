@@ -17,6 +17,13 @@ angular.module('tedApp')
 
     Feed.fetch()
       .$promise.then(function(data) {
+        //add some id's to our feed array. so we can later reference it once we are in new view
+        var counter = 0;
+        data.responseData.feed.entries.forEach(function(el) {
+          el.ind = counter;
+          counter++;
+        });
+
         console.log(data.responseData.feed.entries);
         $scope.feed = data.responseData.feed.entries;
       });
