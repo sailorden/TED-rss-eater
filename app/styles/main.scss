@@ -21,6 +21,8 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
         color: grey;
     }
 }
+
+//default size for mobile.
 .talk-pic {
     width: 38.2%;
     display: inline-block;
@@ -28,6 +30,8 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 
 .list-group-item {
     display: inline-block !important;
+    border: none !important;
+    width: 100%;
 }
 
 .close-video {
@@ -73,14 +77,6 @@ body {
     padding-right: 15px;
 }
 
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-}
-
 /* Custom page footer */
 .footer {
     padding-top: 19px;
@@ -94,35 +90,45 @@ body {
     body {
         font-size: 13px;
     }
+
 }
 
-@media screen and (min-width: 768px) and (max-width: 959px) {
-    .container {
-        max-width: 730px;
+@media screen and (min-width: 400px) {
+    .talk-pic {
+        width: 100%;
+        display: block;
     }
-
-    /* Remove the padding we set earlier */
-    .header,
-    .marketing,
-    .footer {
-        padding-left: 0;
-        padding-right: 0;
-    }
-    .header {
-        margin-bottom: 15px;
+    .talk-desc {
+        display: block;
+        width: 100%;
+        background-color: black;
+        color: white;
+        padding: 10px;
+        .talk-desc-title {
+            
+        }
+        .talk-desc-date {
+            color: grey;
+        }
     }
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 540px) {
     .header {
         margin-bottom: 20px;
     }
     .container {
         max-width: 960px;
     }
+    .talk-desc {
+        p {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+    }
     .list-group-item {
         width: 50%;
-        height: 180px;
         vertical-align: middle;
     }
 }
