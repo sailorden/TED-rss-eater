@@ -2,20 +2,22 @@
   TED
 </div>
 
-<div>
-  <ul class="list-group">
-    <li class="list-group-item" ng-repeat="talk in feed" ui-sref="home.video({ talkId:talk.ind })">
-      <div class="talk-pic">
-        <img ng-src="{{talk.mediaGroups[0].contents[0].thumbnails[0].url}}" class="img-responsive"/>
-      </div>
-      <div class="talk-desc">
-        {{talk.title}}
-      </div>
-    </li>
-  </ul>
-</div>
+<div id="main-wrapper">
+  <div>
+    <ul class="list-group">
+      <li class="list-group-item" ng-repeat="talk in feed" ui-sref="home.video({ talkId:talk.ind })">
+        <div class="talk-pic">
+          <img ng-src="{{talk.mediaGroups[0].contents[0].thumbnails[0].url}}" class="img-responsive"/>
+        </div>
+        <div class="talk-desc">
+          {{talk.title}}
+        </div>
+      </li>
+    </ul>
+  </div>
 
-<div ui-view>
+  <div ui-view id="video-wrapper">
+  </div>
 </div>
 
 <div class="footer">

@@ -15,6 +15,17 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
     display: inline-block;
 }
 
+#main-wrapper {
+    position: relative;
+}
+
+#video-wrapper {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
 .browsehappy {
     margin: 0.2em 0;
     background: #ccc;
