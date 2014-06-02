@@ -6,13 +6,28 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 @import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
 // endbower
 
+.header {
+    margin-bottom: 10px;
+}
+
 .talk-desc {
     display: inline-block;
     width: 60%;
+    vertical-align: top;
+    .talk-desc-title {
+        
+    }
+    .talk-desc-date {
+        color: grey;
+    }
 }
 .talk-pic {
     width: 38.2%;
     display: inline-block;
+}
+
+.list-group-item {
+    display: inline-block !important;
 }
 
 .close-video {
@@ -74,8 +89,14 @@ body {
 }
 
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
+/* Responsive: */
+@media screen and (max-width: 400px) {
+    body {
+        font-size: 13px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 959px) {
     .container {
         max-width: 730px;
     }
@@ -87,12 +108,21 @@ body {
         padding-left: 0;
         padding-right: 0;
     }
-    /* Space out the masthead */
     .header {
-        margin-bottom: 30px;
+        margin-bottom: 15px;
     }
-    /* Remove the bottom border on the jumbotron for visual effect */
-    .jumbotron {
-        border-bottom: 0;
+}
+
+@media screen and (min-width: 960px) {
+    .header {
+        margin-bottom: 20px;
+    }
+    .container {
+        max-width: 960px;
+    }
+    .list-group-item {
+        width: 50%;
+        height: 180px;
+        vertical-align: middle;
     }
 }

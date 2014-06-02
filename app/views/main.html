@@ -10,7 +10,8 @@
           <img ng-src="{{talk.mediaGroups[0].contents[0].thumbnails[0].url}}" class="img-responsive"/>
         </div>
         <div class="talk-desc">
-          {{talk.title}}
+          <p class="talk-desc-title">{{talk.title}}</p>
+          <p class="talk-desc-date">{{talk.publishedDate}}</p>
         </div>
       </li>
     </ul>
